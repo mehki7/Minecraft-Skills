@@ -1,0 +1,9 @@
+# Documentation-only package: keep local validation and source payloads out.
+.research/
+__pycache__/
+*.pyc
+.env
+*.jar
+*.mcaddon
+*.mcpack
+*.zip

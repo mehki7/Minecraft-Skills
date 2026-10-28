@@ -1,0 +1,1249 @@
+{
+  "inspected_on": "2026-10-13",
+  "scope": "Selected technical source/report metadata; no original payloads or raw conversations. Historical source tests were not rerun.",
+  "remote_snapshot_hash_note": "sha256_snapshot identifies the UTF-8 API materialization used for review (line endings/BOM may differ from Git blob bytes). revision and path identify the original GitHub source.",
+  "root_aliases": {
+    "dbc": "Documents/ChatGPT/dragon block c port",
+    "local_mods": "Documents/ChatGPT/mincraft",
+    "godzilla_port": "Documents/Codex/2026-10-06/i-x20",
+    "berthacraft_local": "orespawn-remake",
+    "kong_local": "kong",
+    "kong_zilla_local": "kong-zilla",
+    "zilla_263_local": "ZillaCraft-mc26.3",
+    "portal_gun": "Documents/ChatGPT/mincraft/portal-gun"
+  },
+  "sources": [
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/ZillaCraft",
+      "revision": "286c6d4465e1537f84d5405b1abde963f5028980",
+      "default_branch": "main",
+      "path": "README.md",
+      "sha256_snapshot": "1d4f2a398ff61fa96193249796766ce0727a81d9a045f67108e0442aef8c7fed"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/ZillaCraft",
+      "revision": "286c6d4465e1537f84d5405b1abde963f5028980",
+      "default_branch": "main",
+      "path": "build.gradle",
+      "sha256_snapshot": "46c62df08f54167d9a11593b601ddfe4f783c4615c942b069b928f93176feeff"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/ZillaCraft",
+      "revision": "286c6d4465e1537f84d5405b1abde963f5028980",
+      "default_branch": "main",
+      "path": "gradle.properties",
+      "sha256_snapshot": "5035d5372126e4eb3874f52657f5419519b74e788d0aa9623f9d45d12c724dd2"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/ZillaCraft",
+      "revision": "286c6d4465e1537f84d5405b1abde963f5028980",
+      "default_branch": "main",
+      "path": "tools/README.md",
+      "sha256_snapshot": "bd988fc329168cd6c84f2df6507e6ca1c31c63401202e31bca0c2ff2c770a3ad"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/ZillaCraft",
+      "revision": "286c6d4465e1537f84d5405b1abde963f5028980",
+      "default_branch": "main",
+      "path": "src/gametest/java/mod/kingkongtest/HitboxGameTests.java",
+      "sha256_snapshot": "6cc7b2af88a9869d0d3f3df9a59f517ede949c0a217a6d7cb9285f3806c15f3d"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/ZillaCraft",
+      "revision": "286c6d4465e1537f84d5405b1abde963f5028980",
+      "default_branch": "main",
+      "path": "src/gametest/java/mod/kingkongtest/client/HitboxCoverage.java",
+      "sha256_snapshot": "2b552f47d2f151c64ddf2a50cacfeb136128d87ba2e1bbb0b9adb1ea9221422e"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/BerthaCraft",
+      "revision": "b716a5ca00fc64d1018a09674abfd34bb3f7a17b",
+      "default_branch": "main",
+      "path": "README.md",
+      "sha256_snapshot": "31deff62899c634699a5a0df3832ff7da16ec47b7f72bdd298da00af8b9667ae"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/BerthaCraft",
+      "revision": "b716a5ca00fc64d1018a09674abfd34bb3f7a17b",
+      "default_branch": "main",
+      "path": "build.gradle",
+      "sha256_snapshot": "3e4771ec775e14f0500c74de30027c88f2a6dd09637bd0c3cd05fcce715c0d78"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/BerthaCraft",
+      "revision": "b716a5ca00fc64d1018a09674abfd34bb3f7a17b",
+      "default_branch": "main",
+      "path": "docs/api/02-entity-rendering.md",
+      "sha256_snapshot": "c4b9934f4bbf41a38710e463d89ac166469fbe9c7c6a8e4d4913b46109734679"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/BerthaCraft",
+      "revision": "b716a5ca00fc64d1018a09674abfd34bb3f7a17b",
+      "default_branch": "main",
+      "path": "docs/api/06-gametest-harness.md",
+      "sha256_snapshot": "ab57710f47afb93538628666c7f618c66e9382f118c8820dd38d63ae23b75947"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/minecraft-kaiju-java-ports",
+      "revision": "76c2d5de7bf6deac9ab3e0a0da889ed9391efa3f",
+      "default_branch": "main",
+      "path": "docs/PORT-NOTES.txt",
+      "sha256_snapshot": "1c15b3730857f2375516df10b91f585b847fb3f40fdfc8d206174cfc2440910d"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/minecraft-kaiju-java-ports",
+      "revision": "76c2d5de7bf6deac9ab3e0a0da889ed9391efa3f",
+      "default_branch": "main",
+      "path": "docs/Kaiju-Craft-V3-PORT-NOTES.txt",
+      "sha256_snapshot": "e9f436ead81186bd7ad6eb3539c23fbc503e9b04c1464f398be51955825ebabe"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/minecraft-kaiju-java-ports",
+      "revision": "76c2d5de7bf6deac9ab3e0a0da889ed9391efa3f",
+      "default_branch": "main",
+      "path": "docs/Kaiju-Craft-V3-VALIDATION.txt",
+      "sha256_snapshot": "eb00387c2056421641559a0c5afe03eecff0713dde87b3911eeb96aa2c1029f2"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/minecraft-kaiju-java-ports",
+      "revision": "76c2d5de7bf6deac9ab3e0a0da889ed9391efa3f",
+      "default_branch": "main",
+      "path": "docs/Legacy-Of-Titans-PORT-NOTES.txt",
+      "sha256_snapshot": "ad49e72508a420734563e4bd96c4ccf59aa78dce0dd18675e2a94e2a667e41a0"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/minecraft-kaiju-java-ports",
+      "revision": "76c2d5de7bf6deac9ab3e0a0da889ed9391efa3f",
+      "default_branch": "main",
+      "path": "docs/Legacy-Of-Titans-VALIDATION.txt",
+      "sha256_snapshot": "d8547cae4b75c55525961ac104116f9d830b3166dab7f6b45ad3b056a1860e18"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/minecraft-kaiju-java-ports",
+      "revision": "76c2d5de7bf6deac9ab3e0a0da889ed9391efa3f",
+      "default_branch": "main",
+      "path": "conversion-tools/README.md",
+      "sha256_snapshot": "fc0be9cba8ae77d6285e4f05c2a1e9fe4c33b991fa2fed9540de305f3958865a"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/astranether",
+      "revision": "e87fa46a7aa0a8376b58bd4d924f787067c1adc8",
+      "default_branch": "codex/initial-import",
+      "path": "VERIFICATION.md",
+      "sha256_snapshot": "78f19e0da12aba1615c648c2bbc8267916e1e59171d2985c6372f85761cf13aa"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/astranether",
+      "revision": "e87fa46a7aa0a8376b58bd4d924f787067c1adc8",
+      "default_branch": "codex/initial-import",
+      "path": "VERIFICATION-1.1.0.md",
+      "sha256_snapshot": "a656f7597c2ce17ce5436f18304382349c3497022e78cd563372019ddbe411f8"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/sift-dimension",
+      "revision": "5460e7ad2ae33b9a7d8905a18d59df6bc6825d6e",
+      "default_branch": "main",
+      "path": "README.md",
+      "sha256_snapshot": "c366e9d1dd2c6e10e358b8df2b48c72c4dd72a8c31239168b981749163db8e2c"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/opus-mutant",
+      "revision": "1e4b1cdd7d4ea531643622740b9dd40cf69f88d9",
+      "default_branch": "main",
+      "path": "README.md",
+      "sha256_snapshot": "86c6389f63f4f98a70e93270cb474738471314154f3bc3dd1e9ba95d2fa2f526"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/DragonMod",
+      "revision": "69c7e7708f92599108af4fd241b60241e0b21205",
+      "default_branch": "codex/initial-import",
+      "path": "README.md",
+      "sha256_snapshot": "7362a6e25057f72f4638ba4c83b301a426ff4f729535681c09ab787bcac604aa"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/DragonMod",
+      "revision": "69c7e7708f92599108af4fd241b60241e0b21205",
+      "default_branch": "codex/initial-import",
+      "path": "build.gradle",
+      "sha256_snapshot": "e5775a98a41975eaf23a385853c55957a05ba055cc1e75340d4ac6db2bfc6114"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/zillacraft-mashup",
+      "revision": "82cf6c120e2de9416fb9065bd0a8646803550149",
+      "default_branch": "main",
+      "path": "README.md",
+      "sha256_snapshot": "be9345b1b49ae4207fbae713c213a799d3257a48742c7bf9d963b6809b03c05e"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/zillacraft-mashup",
+      "revision": "82cf6c120e2de9416fb9065bd0a8646803550149",
+      "default_branch": "main",
+      "path": "crates/kaiju/src/hitboxes.rs",
+      "sha256_snapshot": "68902fbfe18079135ca7cb26123eac483ea5c7911bebce64b3db482da9874762"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/zillacraft-mashup",
+      "revision": "82cf6c120e2de9416fb9065bd0a8646803550149",
+      "default_branch": "main",
+      "path": "crates/kaiju/src/species.rs",
+      "sha256_snapshot": "6f0bdcbf9fe875bc641ee8d2fc94f492df000434294b318ac4fa8aa487ccbcfb"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/ZillaCraft-archive",
+      "revision": "7a162e988a8da5b1b19e2d0698874481a3d9fdb6",
+      "default_branch": "main",
+      "path": "README.md",
+      "sha256_snapshot": "1d4f2a398ff61fa96193249796766ce0727a81d9a045f67108e0442aef8c7fed"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/spawncraft-archive",
+      "revision": "c4f7e60ae0928cc46bf281c0b5b00daeda592f74",
+      "default_branch": "main",
+      "path": "README.md",
+      "sha256_snapshot": "efdc133f28ebcfd08ca1f21b785bd6e65856097d5df341d5c159d337b8aa134e"
+    },
+    {
+      "kind": "remote-file-snapshot",
+      "repository": "RochStudio/berthacraft-dev",
+      "revision": "f556ac07472a6b99cd2e497baf9f197a05fffa83",
+      "default_branch": "main",
+      "path": "README.md",
+      "sha256_snapshot": "085e7daf72fc83a0e9d76d9d111218b21628538a3a080a1c84c13149b40179cf"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "dbc",
+      "path": "CHECKPOINT.txt",
+      "sha256": "cfec4e49634fb92c80bf4ab6bb65ad34166fbcd0e29812a910214adaaa36d848"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "dbc",
+      "path": "reports/installation.json",
+      "sha256": "eecc24fc5dd7623a5ff2f5e24b5e8c61a048528d64c3c725cbca4782f91a70cc"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "dbc",
+      "path": "reports/living-attack-provenance.json",
+      "sha256": "f58f123282a625e2792ef937c171966de87333b97b4194bdf46435c81cc95fe5"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "dbc",
+      "path": "reports/ui-rates-provenance.json",
+      "sha256": "28f128b89ead5cbf479f0972c9b7366b31a6f8322e4aa8b11fd38082ea14423e"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "dbc",
+      "path": "reports/full-port-checklist.json",
+      "sha256": "cb911030d92d9769c01d16759ad9bc03ae934674177e97d4380279ae33db0bfa"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "dbc",
+      "path": "build.gradle",
+      "sha256": "023f0cd17a42574a219b1e970d678a15b00e1750ead3d0d653b0dc50087a19dc"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "local_mods",
+      "path": "roch-mutant-mobs/TEST-REPORT.md",
+      "sha256": "cfbf274560ab6ab6282364a048af8dc6dd746edc3b345f84947543e11ce196db"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "local_mods",
+      "path": "roch-avengers/verification/test-report.md",
+      "sha256": "98a5786bf372d30e6ec1324340f9f49247c43d4dff045582b09f3695c3ffb197"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "local_mods",
+      "path": "roch-xmen/TEST-REPORT.md",
+      "sha256": "457f7c0bb18a10c6943f551e4557826f3797fc1b86d557c159dab17120f8ae7f"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "local_mods",
+      "path": "roch-justice-league/TEST-REPORT.md",
+      "sha256": "052102495044582524b03c7dc0687bebd9dccd291a8f7797522a3b31be991f82"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "godzilla_port",
+      "path": "outputs/Godzilla-Verification.json",
+      "sha256": "66f60e53d06e85964b492342782ccb6eda2524ad49609093c59b9e3c4e903adc"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "berthacraft_local",
+      "path": "run-gametest-main.log",
+      "sha256": "9cc596b56cdeb78a7a3c7affa16eb42d5ed24d1b98cda75f137fc752741be841"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "kong_local",
+      "path": "README.md",
+      "sha256": "ace9024477e45de41ae18504b866c5baf11cf7ad27dbfdbea1e9e6b21331a705"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "kong_local",
+      "path": "run-gametest/gametest-report.xml",
+      "sha256": "48c7ed58d174b4d40ab02cea6403058457feee72cf30a124d41f346db21186b3"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "kong_zilla_local",
+      "path": "README.md",
+      "sha256": "b953528ec0fd499af1cdfb0638ede8447fe12c3505b810e969f556c6ba21be39"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "zilla_263_local",
+      "path": "run-gametest/gametest-report.xml",
+      "sha256": "8277b11592c03542c46fab26d0bb84aa55ebde1d5bd852080afe9f1e7dc99a5e"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "README.md",
+      "sha256": "5a3f10e9819271eaabf65236a0fe5d4ad97086eb7ec5f71c14d6237a48fb5361",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "build.gradle",
+      "sha256": "7ece99c10c2615873f14d96138e55482dcc85772b38a7725dfd4cc9d9cc15450",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/COVERAGE.md",
+      "sha256": "c580a06f243f366480885ec0c3dc75003bd7a5ad0acc88769107b6a62ca9697e",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/VALIDATION.md",
+      "sha256": "6f3c1e8ad1a837058a1381b94818a7786a177ff1b4530ab0a74c6747a694a775",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/gametest-initial-failures.log",
+      "sha256": "1595d6c3cb4f86f6fdf4724ac28bb93663ce2f6e3b4bdc20979bab1701203547",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/gametest-final.log",
+      "sha256": "985b80ccc2e8cea9bdd3ff37f461276f2fb5916ed52ef761a11ab876bdf504d9",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/client-constructor-failure.log",
+      "sha256": "004c51a2c4a2dea01fbb7bf7c2650525c9d5bf0c3f8c2f18365b45e23f3c0296",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/client-initial-geometry-failure.log",
+      "sha256": "94b420ecf2b052e92a750fc463568e19ad55871a48cd555d0376dabad0e4a46b",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/client-console.log",
+      "sha256": "890ff9be01983a2cccb3bddbc51d7fe88f30e9680138956be6e5d512573cc46d",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/resource-validation.json",
+      "sha256": "9ae8282d26dda5ffc5d754b640662dc117b19860b3143d93979041e916d1d2c3",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/installation.json",
+      "sha256": "87c659e9d21e7b953f029604cc6a63e7636a420586e54299a3ba9da10d6e46e9",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "dist/manifest.json",
+      "sha256": "590a7de6294a9149e6fcdf6ff514c5af9eddbfda641f39acabbfec1a0206628b",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "tools/convert_assets.py",
+      "sha256": "9bb9768ff7ff024358ee7aed798e9de07b6be3eafd5900dc2fe91e6cb57f0581",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "tools/package_release.py",
+      "sha256": "14aa43052d48751a9e7a73aec74307a8e1f7e5fd6b2ee735de0484bc3e95b304",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "src/main/java/dev/portalguns/PortalManager.java",
+      "sha256": "10d4360645c4d0aaded9ea460b67cb3f2b2f989140e73b6cf53cb1fad49806eb",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "src/main/java/dev/portalguns/GameEvents.java",
+      "sha256": "7b720a03b9315cba522a0bed23e2cbf99a8b91de1550383850864227c2175a96",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "src/main/java/dev/portalguns/Network.java",
+      "sha256": "8c477a5eb6e08581ee4309b713f61e1832ba568158f86a5c9891311b19ccf756",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "src/main/java/dev/portalguns/client/ItemRenderers.java",
+      "sha256": "d941cb0aa9de2c6437ee5f57916f03564e11d02d5f03722565851adb0f5f6dc3",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "src/main/java/dev/portalguns/client/MeshRenderer.java",
+      "sha256": "c640e3d83c0cdca030c14e0432bdb62392a3a12e9989229b8517f3b18a19f692",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "src/main/java/dev/portalguns/client/GunScreen.java",
+      "sha256": "840dbba4fd614ae07281373263c4c7132be046038256ff9f26abb73b076349a7",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "src/validation/java/dev/portalguns/validation/PortalGameTests.java",
+      "sha256": "322703032bfb6ac7b0be4657f0ae7d1846235d6dfc22a425ca7cf39cba11fdfb",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/screenshots/portal_gun_menu.png",
+      "sha256": "ac68cb970fa3674acfeffd934ae58be549a919804154518b602f5054cf206375",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/screenshots/portal_equipment_and_beakers.png",
+      "sha256": "47c8da45a25f8c488c2ce30a6d66d391302f5e65d9ac1aa47edc920804265d3f",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "local-file",
+      "root_alias": "portal_gun",
+      "path": "reports/screenshots/portal_held_standard_portal_gun.png",
+      "sha256": "0830e576a7a218fe31480c07b2e8f84e6da31b6eec2e868d8ad31d6b7b845d2d",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "README.md",
+      "sha256_git_blob": "57b3ca90bba838e699349eb0e1a931c3c6962c961872bbfc659def2e9a532603",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "COVERAGE.md",
+      "sha256_git_blob": "d8e530901bae07fbcb0fdee7a9c9d39f30e95b7eae4c551ea0eee25a902c2ab6",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "VALIDATION.md",
+      "sha256_git_blob": "380199493ebd0e4bf05f8806641b47a0cf0805d253bff905820a4ac06edf3322",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "dist/RELEASE.json",
+      "sha256_git_blob": "9d23ea5563fd7aecb0f5a50a4878c84c59c5307ef3cf670cf44a65f2d3807087",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.20.1/build.gradle",
+      "sha256_git_blob": "75f873576f3af79624c289d30325ffa7a472092440bb3ba463f2012cd7f0ad6f",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.21.1/build.gradle",
+      "sha256_git_blob": "f097f1dca961362bc52ed9305fa8e3fef6fadb0440adac65bb8b0fcb28efd544",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.20.1/gradle/wrapper/gradle-wrapper.properties",
+      "sha256_git_blob": "0c0c22ccb8e653a13a7df19493b11fe5ce0f5fae7ee4835223d2d2ad028799da",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.21.1/gradle/wrapper/gradle-wrapper.properties",
+      "sha256_git_blob": "c1429f70e761715cb16567c7865f1c2f72752aca7810dbf0400ae25b3f53256e",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.20.1/src/main/java/dev/nei/Platform.java",
+      "sha256_git_blob": "1c533377269e5d7984d805c7df7b25e4df3a211bd3d4ec1d215be41d62efbe4f",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.21.1/src/main/java/dev/nei/Platform.java",
+      "sha256_git_blob": "96d8d73df54e7a2c9275d2c36809fa4dda4536424afe897e9fa696bbf89beb0b",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.20.1/src/main/java/dev/nei/client/JeiProperties.java",
+      "sha256_git_blob": "232bf9159ad4ec832a724076d1f86a8661fe122af75de270d7f2318050ecfd90",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.21.1/src/main/java/dev/nei/client/JeiProperties.java",
+      "sha256_git_blob": "612f16836a4a4dc4936b15e336039e57b7239c6084aa451956189853329960d8",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "shared/src/main/java/dev/nei/client/JeiBridge.java",
+      "sha256_git_blob": "e6efe7f35f6104392dbf49ef3e45687b0523332ee8166419f378b78dddc175dd",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "shared/src/main/java/dev/nei/client/ToolsScreen.java",
+      "sha256_git_blob": "e377c3f70b5ac21da084cd8deaa3af5e68fdb0b5e120dfa641cb6f76b1c8ee19",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "shared/src/main/java/dev/nei/client/WorldOverlays.java",
+      "sha256_git_blob": "03afa53e41a41a3defb26864ebbf6a583f1eba64697e14a6f21fb1a97855ebd8",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "shared/src/main/java/dev/nei/ServerTools.java",
+      "sha256_git_blob": "4172d5c12a807de55d53e3059dcbcf0cf2730632a9a869a5555b40023f44647e",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "validation/src/main/java/dev/nei/validation/Checks.java",
+      "sha256_git_blob": "0277a6ba2273122824ab0fd6a515b49afb49a3714de58d11e2a619ffcd7bb49d",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "validation/src/main/java/dev/nei/validation/ClientChecks.java",
+      "sha256_git_blob": "dcff67b11329340db2fb45855d45ecac91208e9846db138a2d3ba39e68269a55",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.20.1/src/validation/java/dev/nei/validation/TestPlatform.java",
+      "sha256_git_blob": "b0af78e266fe0e6582b4161af8b6a969f47d38c5e65ee15894cc6e0e567fb493",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.21.1/src/validation/java/dev/nei/validation/TestPlatform.java",
+      "sha256_git_blob": "808477ac7022cece10e0c73feac7d6b82bc9c65cfcc63f12e2ae2c82eeb6d885",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.20.1/src/validation/java/dev/nei/validation/NEITests.java",
+      "sha256_git_blob": "0f6be2c845c47afb8be633de47fecd1056701614bf7e24a154a9005e3d1914fa",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "1.21.1/src/validation/java/dev/nei/validation/NEITests.java",
+      "sha256_git_blob": "49191af3468aaed46aeb4e682736606fdae5bd87926f679428753988b1861dc1",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "verification/1.20.1/client-result.json",
+      "sha256_git_blob": "0df76255ab951144daa195c9d5c35fd0d670fdfa1a2e3cd43c5833772fdf2cd6",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "verification/1.21.1/client-result.json",
+      "sha256_git_blob": "56c0c7c1ad8ee0508675aeaf931eb1ad699fb3d36d5199afa0871dc3530898b5",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "verification/1.20.1/gametest.txt",
+      "sha256_git_blob": "4e176146ee15703a1f9c06e9bfe9d699b5ec32c0c5048a90734c24cb0f53a600",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "verification/1.21.1/gametest.txt",
+      "sha256_git_blob": "9962ba4ae7c2f8b2a39bd9fba4950be619199b0053b9c310f5cc9ecabc543d95",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "path": "package_release.py",
+      "sha256_git_blob": "4c6922a5b78b4cf4af8522a2c8fd7ebbaad0355c0f7442323bf08af852191b82",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "README.md",
+      "sha256_git_blob": "5f42129f8195bbd268c5bb59793df869440f50662d812c5d85dbffc11626ebe7",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "COVERAGE.md",
+      "sha256_git_blob": "fb721bf3faa4fd60f2d4331f5a7c3f30dac5526945afb02a717af1b618bf2b80",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "VALIDATION.md",
+      "sha256_git_blob": "2b3f5a85e61224cf54ec3af0e3fee5165d19517f5c54dc012f1fca2504966e6b",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "INSTALLATION.md",
+      "sha256_git_blob": "d4d4ecb971a5325c4f650a7e50d19a418aa60b3feaa2f4cc9d4a5e1b711e876c",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "THIRD-PARTY.md",
+      "sha256_git_blob": "cb976e42a1fbc6bca598527475f268e12ad34517bb92b89d8100c4804cd87d50",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "dist/manifest.json",
+      "sha256_git_blob": "a70d8820da8d712878a2d059bfd889232be8e7b53a5a66964f9bc6e44adf0544",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "dist/SHA256SUMS.txt",
+      "sha256_git_blob": "4fc3c016c5885f5409d98f435e8c471318905d843afa76e4aabfd81f80b20d88",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": ".gitignore",
+      "sha256_git_blob": "abf9ca6849839ba4d9e485db181ced0ab9570f2eae36b93bfe7aaf3e64e840f3",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": ".gitattributes",
+      "sha256_git_blob": "4b686d398d75ffbb650d8ac35f8e565885eaa7c845490899a641a1bbf4e9fc4b",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "tools/package_and_audit.py",
+      "sha256_git_blob": "e88513116f3878eda3b7d043375539285e880e08109ecde08c8244777965df2a",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "tools/assemble_delivery.py",
+      "sha256_git_blob": "f9b30b0921e3695c55d397b91a31fc1285dc82837269ca5fc892cdc30085ae75",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "tools/verify.ps1",
+      "sha256_git_blob": "c4d6662bc2df90a6a374a440c4d88d2016363845333620fee02b0379480eb60b",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/build-support/mixingradle-identity.json",
+      "sha256_git_blob": "d15e327c8c7ebabe060e5412069b3c40854a4c7814b25ccddffb8a8addf0941a",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/src/main/resources/META-INF/accesstransformer.cfg",
+      "sha256_git_blob": "6cccab183a3de0d8b71aa397019e2fb875396903f9103e66cda89f1337f2e1d7",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/build.gradle",
+      "sha256_git_blob": "deb5591a55f407a22ecefc981a6a40d8c27aa03b686c7a463f4c88b8cc795dbd",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/settings.gradle",
+      "sha256_git_blob": "d7a6d6a2ebadbc296501295e5f9687cd34c3c98c02b12709d8db951e768f57cb",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/gradle/wrapper/gradle-wrapper.properties",
+      "sha256_git_blob": "6198cf4b20bf0fb23368037b8ea2d5aea70efa879d364d96f59d762f89744ccf",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/.gitignore",
+      "sha256_git_blob": "fb0fef25e2eefcf167fa3a3fa949daa971e6710b0e18ded1c174307364e6b20d",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "reference/upstream-1.20.1.json",
+      "sha256_git_blob": "5069a5d1ec2734ff1acddbcebaacb77a576c8cf856a1f5b3ee5aebf5201c8d1f",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/Common/src/main/java/fuzs/mutantmonsters/world/item/LegacyChemicalXItem.java",
+      "sha256_git_blob": "abeb465dcc8243d28151e1553ca1067fc0de24454dbec7b570e93b8f7b270165",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/Common/src/main/java/fuzs/mutantmonsters/world/entity/LegacyChemicalXProjectile.java",
+      "sha256_git_blob": "d5666be3c3c806c34d510f74702711ac177cd01fd19ba66227f04d4c90e40ea2",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/Common/src/main/java/fuzs/mutantmonsters/world/entity/SkullSpirit.java",
+      "sha256_git_blob": "7267feca4b2ad4c2e839a9d0e42920d3a4bf1f54032cb9d6214ced4e617f3b3a",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/src/verification/java/dev/mutantport/verification/PortTests.java",
+      "sha256_git_blob": "407c25d3768c88547795426e15840c12b5fc5226caf668bace353d9221f44e26",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.20.1/src/verification/java/dev/mutantport/verification/ClientChecks.java",
+      "sha256_git_blob": "f78367a82f12da5d3e635ea90bd374478ef52f6f256e2c738dfebc57e26bfc18",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "verification/1.20.1/gametest.log",
+      "sha256_git_blob": "879856644e729176af1b41786666d1bc45f9706c270a303c93108d22e0440847",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "verification/1.20.1/client-result.json",
+      "sha256_git_blob": "7592652defa19d15d565f89fa094ffdb788c762e4569a410b3148a9df381fb11",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "verification/1.20.1/artifact-audit.json",
+      "sha256_git_blob": "3c85f57f8edb527d035061f28d3d1fa052b2fc7745f3ed8987c23f24daf99798",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "verification/1.20.1/tested-production-classes.json",
+      "sha256_git_blob": "e8a9c136d554001930eee90f99d17d28cae86c7b2eb2ef3c0e105997e180a9a0",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/build.gradle",
+      "sha256_git_blob": "23873adf73cbac6b98d2a76d8c23c9c17480c8f2dff5da8ef1c70580ecb4ee17",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/settings.gradle",
+      "sha256_git_blob": "5a42e25042081978bb9737d2d49f04eb3e846a12bec764fc3152238a58321160",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/gradle/wrapper/gradle-wrapper.properties",
+      "sha256_git_blob": "189d67949ab358e1f4f9bee64afe8ccb2345b20d471b29a6392193ae77bf2782",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/.gitignore",
+      "sha256_git_blob": "9abb9092ff86c9dbf1fe8db3103fd9d090b6c2c829e25fcf4560cb0cead0daaa",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "reference/upstream-1.21.1.json",
+      "sha256_git_blob": "2727c115848772694be1cc4acdc96820c041c983fa036ddc4926c930aee8918a",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/Common/src/main/java/fuzs/mutantmonsters/world/item/LegacyChemicalXItem.java",
+      "sha256_git_blob": "abeb465dcc8243d28151e1553ca1067fc0de24454dbec7b570e93b8f7b270165",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/Common/src/main/java/fuzs/mutantmonsters/world/entity/LegacyChemicalXProjectile.java",
+      "sha256_git_blob": "e982e869a6188ff2a4fcf44200e708810a6359701bc87407c72fc575565aff7d",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/Common/src/main/java/fuzs/mutantmonsters/world/entity/SkullSpirit.java",
+      "sha256_git_blob": "2d79bb62cfb71317b9651bf9f74b1d86bf559e49c959fe2f810f695194501a70",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/src/verification/java/dev/mutantport/verification/PortTests.java",
+      "sha256_git_blob": "c1aaac31accde8facc184d956260779113011562e67cb9a02f4ed450b73a3ca1",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "1.21.1/src/verification/java/dev/mutantport/verification/ClientChecks.java",
+      "sha256_git_blob": "232b6792572a02192dd27237138d59aca3c7c944de1b1afb404e1ed5473afaba",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "verification/1.21.1/gametest.log",
+      "sha256_git_blob": "1465b465dcda3f466139e71d1230a1292e44abbcc6682ba65495b5cd164bf797",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "verification/1.21.1/client-result.json",
+      "sha256_git_blob": "661af13a8f9a1f98d73f2c6b374da490527ea1457d61bc520bdc8716e02f7c52",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "verification/1.21.1/artifact-audit.json",
+      "sha256_git_blob": "93f2f78ca271d38315a59ab582b1ee1b9435bdb56f969f466f4dc662c31211a6",
+      "inspected_on": "2026-10-13"
+    },
+    {
+      "kind": "git-blob-metadata",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "path": "verification/1.21.1/tested-production-classes.json",
+      "sha256_git_blob": "b781d42f44b4b0bc52c1a82436d67028f39292d13443b871e1c4fd627458e9c7",
+      "inspected_on": "2026-10-13"
+    }
+  ],
+  "session_updates": [
+    {
+      "inspected_on": "2026-10-13",
+      "thread_id": "01a136a9-e2a7-71e2-844d-e1615c33a15d",
+      "title": "Port add-on to Forge 1.20.1",
+      "source_release": "Portal Gun v1.1.1 / 1.1.1-alpha.1",
+      "created_at_utc": "2026-10-13T19:07:45Z",
+      "latest_completed_at_utc": "2026-10-13T20:08:27Z",
+      "source_revision_status": "portal-gun is untracked in the source workspace; selected file hashes identify the inspected state",
+      "source_archive_sha256": "ed229ef442436cb84181627933ebda755fdf073883ed6849f9398bef29a0ddba",
+      "artifacts": [
+        {
+          "filename": "portal-gun-forge-1.20.1-1.1.1-alpha.1.jar",
+          "sha256": "9d90dbb252c5b1a57c0d0b252e75f5251d590fcb1255987a058dc8f063541315",
+          "bytes": 1587268
+        },
+        {
+          "filename": "geckolib-forge-1.20.1-4.8.4.jar",
+          "sha256": "4518779a31b6c2abb92c98b5ad17ef3d60177df68626bfc86c44de2764913c2b",
+          "bytes": 1038209
+        }
+      ],
+      "checked_in_this_update": {
+        "read_only_zip_integrity": true,
+        "java_class_target": 61,
+        "class_count": 32,
+        "qa_payload": false,
+        "crafting_recipes": 13,
+        "artifact_hashes_match_manifest": true,
+        "saved_captures_visually_inspected": 3
+      },
+      "runtime_tests_rerun": false,
+      "user_outcome": "The supported session records requested installation and subsequent user confirmation that it worked; no claim of exhaustive testing."
+    },
+    {
+      "inspected_on": "2026-10-13",
+      "source_release": "Not Enough Items Modern Forge 2.0.0-port.1",
+      "repository": "RochStudio/not-enough-items-modern-forge",
+      "revision": "dbf4c5e18604b53b2fecb728edea6f518b4886aa",
+      "tag": "v2.0.0-port.1",
+      "release_url": "https://github.com/RochStudio/not-enough-items-modern-forge/releases/tag/v2.0.0-port.1",
+      "source_reference": {
+        "binary": "NotEnoughItems-1.7.10-1.0.5.120-universal.jar",
+        "sha256": "3ebbc2f82b61812aa158375005a47da4d450bec870860fcbf015a64de74cde1c",
+        "upstream_repository": "Chicken-Bones/NotEnoughItems",
+        "upstream_revision": "285e7c528a7a5695a2fc0a234da15bf68561ad20",
+        "exact_binary_source_revision_established": false
+      },
+      "full_legacy_parity": false,
+      "runtime_tests_rerun": false,
+      "checked_in_this_update": {
+        "source_git_blob_metadata_count": 27,
+        "artifact_hashes_match_manifest": true,
+        "production_jar_count": 2,
+        "production_classes_per_target": 13,
+        "classfile_majors": [
+          61,
+          65
+        ],
+        "qa_payload_present": false,
+        "required_server_tests_recorded_per_target": 4,
+        "connected_client_checks_recorded_per_target": 14,
+        "release_tag_matches_revision": true,
+        "private_repository": true,
+        "prerelease": true,
+        "uploaded_assets_verified_sha256": 7
+      },
+      "artifacts": [
+        {
+          "filename": "NEI-1.20.1-Forge-bundle.zip",
+          "bytes": 2086328,
+          "sha256": "40a0a54e4f7b81988259a0800633a57196ed03b5eacbd50de69be62b8b0c0901"
+        },
+        {
+          "filename": "NEI-1.21.1-Forge-bundle.zip",
+          "bytes": 2210486,
+          "sha256": "1d0b47b9439d1e1999e5263f28506fd49b421cdaf57e58a27bbad04a209dbc3f"
+        },
+        {
+          "filename": "NEI-Forge-source.zip",
+          "bytes": 144794,
+          "sha256": "be1510ef7fa3df8679638ec4832b3503112697bedd61e75ffec50fa523f47f69"
+        },
+        {
+          "filename": "NotEnoughItems-forge-1.20.1-2.0.0-port.1.jar",
+          "bytes": 36683,
+          "sha256": "db8a572aa0aad6d4aa49431e22058d050d7e71377072eb16eb7eed10559c3a28"
+        },
+        {
+          "filename": "NotEnoughItems-forge-1.21.1-2.0.0-port.1.jar",
+          "bytes": 36749,
+          "sha256": "c9d22352ab1cc110297e94133faac41e5665f517871f9642a70bc8197a0592cf"
+        },
+        {
+          "filename": "RELEASE.json",
+          "bytes": 2019,
+          "sha256": "9d23ea5563fd7aecb0f5a50a4878c84c59c5307ef3cf670cf44a65f2d3807087"
+        },
+        {
+          "filename": "SHA256SUMS.txt",
+          "bytes": 582,
+          "sha256": "49151115618973e06607f0c29fbef74ff64c7a9a9ae14edc0ec43bd065630bba"
+        }
+      ],
+      "limits": "Runtime passes occurred earlier in this session using development output. This documentation update performed read-only evidence, archive, metadata and release checks; no Minecraft runs or installation. Full legacy parity, old add-ons, WAN/modpack compatibility and broader lifecycle remain unverified or omitted."
+    },
+    {
+      "inspected_on": "2026-10-13",
+      "source_release": "Mutant Creatures legacy adaptation 1.4.9-port.1",
+      "repository": "RochStudio/mutant-creatures-legacy-port",
+      "revision": "da3c174942ff31922d976de18f5428eda4561612",
+      "default_branch": "codex/legacy-port",
+      "source_reference": {
+        "binary": "MutantCreatures-1.7.10-1.4.9 (1).jar",
+        "sha256": "8ec0fc2b41a02ca05e65b3200dfe08379299d4460fbc6cd34f3de95b6afd0b6d",
+        "revival_repository": "Fuzss/mutant-monsters",
+        "revival_revisions": {
+          "1.20.1": "9e12427a6b0a12b3e11275ddd7b376db82234c7f",
+          "1.21.1": "15e00d5b8cacfffeafc484a28743897ba03cec13"
+        },
+        "exact_binary_source_revision_established": false
+      },
+      "full_legacy_parity": false,
+      "runtime_tests_rerun": false,
+      "source_project_modified": false,
+      "launcher_modified_in_this_update": false,
+      "checked_in_this_update": {
+        "source_git_blob_metadata_count": 42,
+        "private_repository": true,
+        "artifact_hashes_match_manifest": true,
+        "production_jar_count": 2,
+        "production_classes_by_target": {
+          "1.20.1": 167,
+          "1.21.1": 177
+        },
+        "classfile_majors": [
+          61,
+          65
+        ],
+        "qa_payload_present": false,
+        "required_server_tests_recorded_per_target": 8,
+        "connected_integrated_client_assertions_recorded_per_target": 19,
+        "installed_neoforge_jar_hashes_rechecked": 2
+      },
+      "historical_custom_ogg_decodes_per_target": 40,
+      "installation_evidence": {
+        "source": "INSTALLATION.md plus local receipt inspected without copying machine paths",
+        "neoforge_profile_added": true,
+        "tooling_game_launched": false,
+        "packaged_gameplay_verified": false,
+        "user_play_confirmation_recorded": false
+      },
+      "artifacts": [
+        {
+          "filename": "MutantCreatures-forge-1.20.1-1.4.9-port.1.jar",
+          "sha256": "b07ccc36085d16bb4bd12c1aad76d4aee9fcbab233c3c927f074acf66a6e857f",
+          "bytes": 1307914
+        },
+        {
+          "filename": "PuzzlesLib-v8.1.36-1.20.1-Forge.jar",
+          "sha256": "103f1d46c16023e346802a9b2024db885cf8dc3a43ee5106bcd5ed8165073efd",
+          "bytes": 1790007
+        },
+        {
+          "filename": "MutantCreatures-neoforge-1.21.1-1.4.9-port.1.jar",
+          "sha256": "5a72c67c845ac9527f592feb22e9b0443589baf3cb8dbba388dc344930ff81cc",
+          "bytes": 1336680
+        },
+        {
+          "filename": "puzzleslib-v21.1.64-mc1.21.1+neoforge.jar",
+          "sha256": "8f0694456687614dea3861515ce04e2a0d0bf9d87aa48ea2edc4972b0ba4e88b",
+          "bytes": 1451067
+        },
+        {
+          "filename": "MutantCreatures-1.20.1-Forge-bundle.zip",
+          "sha256": "3003ce71f965f74a214058bdc5f2f92a4a4ab20860d244c30822ae9a5d8788cf",
+          "bytes": 2899060
+        },
+        {
+          "filename": "MutantCreatures-1.21.1-NeoForge-bundle.zip",
+          "sha256": "b5c2ab7a92877990847994554693359c7b6c2a9a4e03025af939fb0d2088cc1f",
+          "bytes": 2547434
+        },
+        {
+          "filename": "MutantCreatures-1.4.9-port.1-source.zip",
+          "sha256": "dfc965011d6449e8335eb626ceb7dd43b19bec2d1b6a8c609183fde75dd266db",
+          "bytes": 5338026
+        }
+      ],
+      "limits": "Revival-based modern adaptation, not original executable oracle/parity. Prior native/client tests and audio decodes were not rerun. No old-save migration, complete attack/equipment/pet/spawn coverage, dedicated multiplayer, WAN/modpack or packaged gameplay claim."
+    }
+  ]
+}
