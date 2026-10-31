@@ -1,39 +1,75 @@
-# lunar-189-port-kit
+# Lunar Client 1.8.9 Port Kit
 
-Two agent skills + recon tooling for porting client-side Minecraft mods
-onto Lunar Client's 1.8.9 "legacy" lane.
+Skill pack for porting Minecraft 1.8.9 mods onto Lunar Client.
 
-## Order to use this in
+## Start here: TARGET.md
 
-1. Read `TARGET.md` first, always. It's the one file that says what's
-   actually confirmed vs still a guess, and it's based on real evidence
-   pulled from an actual Lunar install (2026-10-27), not assumption.
-2. If something you need is marked UNVERIFIED in `TARGET.md`, run the
-   matching script in `RECON/` against your own install before trusting
-   it. Right now that's just `RECON/02-mine-mixin-targets.py` (resolves
-   which vanilla class a given mixin targets) — more RECON scripts can be
-   added the same way as more unknowns come up.
-3. Drop `skills/minecraft-legacy-modding/` and `skills/minecraft-lunar-client/`
-   into your coding agent's skills folder. The agent should read
-   `minecraft-lunar-client/SKILL.md` first for anything Lunar-specific —
-   it links back to `TARGET.md` itself.
+`TARGET.md` is the single source of truth. Every ABI fact (class names,
+method descriptors, Searge names, confirmed behaviors) is pinned there with
+evidence. Read it before touching any code. Nothing marked UNVERIFIED in
+TARGET.md may be treated as settled anywhere else in this pack.
 
-## Why two skills instead of one
+## Two hard rules, before anything else
 
-`minecraft-legacy-modding` covers the general 1.7/1.8/1.12 modding
-landscape (plain Forge era conventions). `minecraft-lunar-client` covers
-what's specific to Lunar's own closed, obfuscated, Mixin-only client,
-which breaks several of the general era's default assumptions (most
-notably: Lunar's 1.8 lane runs Java 17, not Java 8 — confirmed, not a
-guess). Keeping them separate means an agent reading only one doesn't
-accidentally inherit the wrong toolchain or API assumptions from the
-other.
+1. **Every vanilla method and field name must be Searge** (`func_78472_g`,
+   `field_74333_Y`). MCP names (`updateLightmap`, `gammaSetting`) do not
+   exist in the running game and fail silently. This applies to `@Inject`
+   strings AND to ordinary call sites in your compiled code.
+2. **`defaultRequire: 1`** in every mixin JSON, so a wrong name throws
+   instead of being skipped in silence.
 
-## What's confirmed vs still open
+## Step 0 — run the smoke test first
 
-See `TARGET.md`'s VERIFIED / LIKELY / UNVERIFIED triage. Short version:
-jar layout, mixin config structure, Java 17 compat level, and the
-no-refmap/obfuscated-names situation are all confirmed directly from an
-actual install. Still open: what vanilla class each specific mixin
-targets, where (if anywhere) a drop-in external mods folder exists for
-this specific lane, and what's inside the platform-mappings jar.
+The smoke test proves the Mixin pipeline works on YOUR install before you
+write any port code. See `Example Mod for 1.8/smoketest/` — it has the
+build commands, and its manifest and mixin JSON are the template for every
+new port.
+
+Drop the jar in the mods folder, launch, join a world. Both of these must
+appear in `latest.log`:
+
+    [SMOKETEST] *** SMOKE TEST PASS -- plugin onLoad fired
+    [SMOKETEST] *** INJECT PASS -- updateLightmap HEAD fired
+
+Both lines = pipeline confirmed. One or both missing = stop and debug.
+
+## Skills (4)
+
+| Skill | Status | Purpose |
+|---|---|---|
+| `skills/minecraft-lunar-client/` | VERIFIED | Lunar-specific Mixin doctrine; canonical port workflow |
+| `skills/minecraft-legacy-modding-189/` | VERIFIED | 1.8.9 game API, vanilla class/method knowledge |
+| `skills/minecraft-legacy-modding-1710/` | UNVERIFIED | 1.7.10 knowledge — no tsrg coverage confirmed |
+| `skills/minecraft-oneclient/` | UNVERIFIED | OneClient — no names confirmed |
+
+Do not use the 1710 or oneclient skills for production port work until
+RECON is run and TARGET.md is updated.
+
+## Example mods
+
+- `Example Mod for 1.8/smoketest/` — the canonical build example. Copy its
+  folder layout, manifest keys, and mixin JSON for every new port.
+- `Example Mod for 1.8/port-guiingame/` — first real port. `@Inject` at
+  TAIL of `func_175180_a` (`GuiIngame.renderGameOverlay`).
+- `Example Mod for 1.8/Example-1.8.9-Mod/` — Kotlin/Architectury Loom
+  template. Reference only, not the Lunar pattern. See `README-EXAMPLE.md`.
+
+## Mods folder (VERIFIED)
+
+    C:\Users\<user>\.lunarclient\profiles\1.8-furiahvisuals\mods\
+
+Drop a `.jar` here; Lunar picks it up with zero configuration and no launch
+arguments. Confirmed 2026-10-29.
+
+## Doctrine
+
+- **Forge events work** — `@SubscribeEvent` fires. Confirmed by a live
+  Searge-compiled mod (`EntityJoinWorldEvent`). Use events for entity
+  spawn, tick, and HUD work.
+- **Mixin for what events can't reach** — renderer internals, shader-level
+  effects. FuriahVisuals itself is Mixin-based for this reason.
+- Use `@Inject`, not `@Overwrite` — FuriahVisuals hooks the same classes.
+- Compile at Java 8 with `-proc:none`, classpath
+  `legacy-0.1.0-SNAPSHOT-all-nomappings.jar` so `func_` names resolve.
+- Name source of truth: `lunar2searge.tsrg` at
+  `C:\Users\<user>\AppData\Roaming\.minecraft\.ichor\lunar2searge.tsrg`

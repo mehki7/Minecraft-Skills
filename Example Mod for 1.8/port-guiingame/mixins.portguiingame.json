@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.7",
+  "package": "com.porttest.mixin",
+  "plugin": "com.porttest.PortPlugin",
+  "compatibilityLevel": "JAVA_8",
+  "defaultRequire": 1,
+  "mixins": [
+    "MixinGuiIngame"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
