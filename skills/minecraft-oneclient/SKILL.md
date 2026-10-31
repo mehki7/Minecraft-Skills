@@ -1,9 +1,21 @@
 ---
 name: minecraft-oneclient
-description: Modding or patching Minecraft 1.8.9 on OneClient (a Forge-based client with its own classloader and potentially custom coremod/mixin layer). Use when the specific target is OneClient 1.8.9, not plain Forge, not Lunar. Versions newer than 1.8.9 are out of scope.
+description: Modding or patching Minecraft 1.8.9 on OneClient (a Forge-based client with its own classloader). Use when the specific target is OneClient 1.8.9, not plain Forge, not Lunar. Pair with minecraft-legacy-modding-189 for 1.8.9 background.
 ---
 
 # OneClient 1.8.9 modding
+
+> **⚠ WARNING — ONECLIENT UNVERIFIED ON CURRENT BUILDS**
+>
+> OneClient's classloader behavior, bundled modifications, and mixin layer
+> have NOT been inventoried at the level that Lunar Client has been.
+> No class, method, or field names have been confirmed from any OneClient
+> jar. No inject test has been run on any OneClient install.
+>
+> The 1.8.9 lane on Lunar Client is the only proven lane in this repo.
+> Do not assume OneClient behaves identically to Lunar or to plain Forge
+> without first running RECON on a real install and recording the results
+> in TARGET.md.
 
 OneClient is a Forge-based client, meaning it runs on top of Forge 1.8.9 and
 in principle exposes the standard Forge FML lifecycle (`@Mod`, event bus, `GameRegistry`).
@@ -11,25 +23,8 @@ However, like Lunar Client, it ships its own classloader modifications and may b
 its own coremod or mixin hooks that interact with the standard Forge load sequence.
 
 **The key difference from plain Forge 1.8.9:** OneClient may intercept or modify
-class loading in ways that affect coremod or mixin behavior. Read `references/oneclient-loader.md`
-to understand what is confirmed about OneClient's specific classloader behavior
-before writing any coremod or ASM hook.
-
-## Status
-
-Unlike Lunar Client (where the jar internals have been directly inspected and documented
-in TARGET.md), OneClient's specific classloader and bundled modifications have not yet
-been inventoried at the same level. Use the UNVERIFIED pattern: confirm the actual
-behavior from a real install before relying on assumptions.
-
-## Routing
-
-| Need | Read |
-|---|---|
-| OneClient classloader behavior and bundle layout | [oneclient-loader.md](references/oneclient-loader.md) |
-| Porting a plain Forge 1.8.9 mod to run on OneClient | [forge-to-oneclient-port.md](references/forge-to-oneclient-port.md) |
-| Mixin vs coremod choice on OneClient | [oneclient-hooks.md](references/oneclient-hooks.md) |
-| Debugging failures specific to OneClient | [debugging.md](references/debugging.md) |
+class loading in ways that affect coremod or mixin behavior. Confirm the actual
+classloader behavior from a real install before writing any hook that depends on it.
 
 ## Default assumptions (carry forward from plain Forge 1.8.9 until RECON contradicts)
 
@@ -48,7 +43,7 @@ for a hook that touches OneClient's own client-side features.
 OneClient-specific features (minimap, cosmetics, performance overlays, etc.) are
 implemented as coremods or patches on top of Forge. If you are trying to hook into or
 interact with those specific OneClient features, you need to inspect their implementation
-the same way you would inspect Lunar's mixin layer — see `oneclient-hooks.md`.
+the same way you would inspect Lunar's mixin layer.
 
 If you are only adding a standalone content mod (new blocks, items, mobs, game mechanics)
 that does not interact with OneClient's own features, plain Forge 1.8.9 patterns from
@@ -61,3 +56,5 @@ that does not interact with OneClient's own features, plain Forge 1.8.9 patterns
 - Assuming a mod tested only on plain Forge 1.8.9 will work identically on OneClient
   without testing — verify on the actual client.
 - Using anything newer than 1.8.9 APIs, ForgeGradle 6+, or Java 17 conventions here.
+- Writing mixin `@Inject` annotations using guessed or MCP names without first running
+  tsrg RECON on a real OneClient install and recording the output in TARGET.md.

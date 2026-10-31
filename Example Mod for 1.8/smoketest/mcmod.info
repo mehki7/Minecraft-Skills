@@ -1,0 +1,10 @@
+[{
+  "modid": "smoketest",
+  "name": "Smoke Test",
+  "description": "Mixin smoke test for Lunar Client 1.8.9 port kit. Not a real mod.",
+  "version": "1.0",
+  "mcversion": "1.8.9",
+  "url": "",
+  "authorList": [],
+  "credits": ""
+}]

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.7",
+  "package": "com.smoketest.mixin",
+  "plugin": "com.smoketest.SmokePlugin",
+  "compatibilityLevel": "JAVA_8",
+  "defaultRequire": 1,
+  "mixins": [
+    "MixinEntityRendererSmoke"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

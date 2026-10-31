@@ -1,15 +1,14 @@
-
 ---
 name: minecraft-legacy-modding-189
-description: General knowledge for modding Minecraft 1.7.x/1.8.x/1.12.x era — old MCP mappings, Mixin basics, Java 8-era tooling norms. Use when the target game version predates modern NeoForge/Fabric (26.x) or Forge 1.20.1. Pair with minecraft-lunar-client when the actual target is Lunar Client specifically, not plain Forge.
+description: General knowledge for modding Minecraft 1.8.9 specifically — old MCP mappings, Mixin basics, Java 8-era tooling. Use for plain Forge 1.8.9 targets. Pair with minecraft-lunar-client when the actual target is Lunar Client, and with minecraft-legacy-modding-1710 for 1.7.10 work.
 ---
 
-# Legacy Minecraft modding (1.7.x / 1.8.x / 1.12.x)
+# Legacy Minecraft modding (1.8.9)
 
-This covers the general old-Minecraft modding landscape. If the actual
+This covers the general 1.8.9 modding landscape. If the actual
 target is Lunar Client (not plain vanilla+Forge), read
 `minecraft-lunar-client` as well — Lunar breaks several of the default
-assumptions below.
+assumptions below. For 1.7.10 work, pair with `minecraft-legacy-modding-1710`.
 
 ## Default assumptions for this era — and the one exception
 
@@ -97,7 +96,7 @@ mix vanilla-Forge API assumptions into Lunar-targeted mixin code.
 
 ---
 
-## Mixin in the 1.7/1.8/1.12 era
+## Mixin in the 1.8.9 era
 
 Mixin existed during this era but was not Forge's primary hook mechanism
 — coremods (`IFMLLoadingPlugin` + `IClassTransformer`, raw ASM) were the
@@ -154,3 +153,100 @@ multiplayer, and NBT persistence. Registering directly into vanilla's
 registries bypasses all of that. For a purely client-side visual/QoL mod
 (the more common Lunar use case), this mostly doesn't matter, but say
 explicitly which case you're in before assuming it's safe to skip.
+FIX 5 — README.md (full rewrite)
+markdown
+# Minecraft Skills — Lunar 1.8.9 Port Kit
+
+Skill pack and runtime name table for porting 1.8.9 Forge mods onto
+Lunar Client. Active target mods: FuriahVisuals (in progress) and
+MoBends 1.7.10 backport (not started).
+
+---
+
+## Start here: TARGET.md
+
+`TARGET.md` (repo root) is the single source of truth for what's
+actually confirmed at runtime vs still unverified. Read it before
+writing any mixin code. Never assert a class, method, or field name
+that TARGET.md marks UNVERIFIED.
+
+Key verified entries (as of 2026-10-29):
+- `func_78472_g` = `updateLightmap(F)V` on `EntityRenderer` — tsrg + live inject
+- 10 classes, 10 methods, 1 field confirmed
+- External mods path: `.lunarclient\profiles\<profile>\mods\` — VERIFIED
+
+---
+
+## Step 0 before anything else: run the smoke test
+
+Source in `Example Mod for 1.8/smoketest/`. Build commands:
+
+```bat
+javac -proc:none -cp FuriahVisuals.jar -d classes SmokePlugin.java MixinEntityRendererSmoke.java
+jar cfm smoketest.jar META-INF\MANIFEST.MF -C classes . mixins.smoketest.json mcmod.info
+copy smoketest.jar ".lunarclient\profiles\<profile>\mods\"
+```
+
+Launch, join a world, quit. Run:
+
+```bat
+findstr "SMOKETEST" .lunarclient\profiles\<profile>\logs\latest.log
+```
+
+You need both lines:
+- `*** SMOKE TEST PASS -- plugin onLoad fired ***`
+- `*** INJECT PASS -- updateLightmap HEAD fired ***`
+
+If either is missing, stop and debug before writing real mod code. See
+`skills/minecraft-lunar-client/SKILL.md` Debugging section.
+
+---
+
+## Skills in this pack
+
+Install skills from the `skills/` folder. Four skills:
+
+| Skill folder | When to use |
+|---|---|
+| `minecraft-lunar-client` | Any Lunar Client 1.8 porting work — load this first |
+| `minecraft-legacy-modding-189` | Plain Forge 1.8.9 background, MCP mappings, Mixin basics. Pair with the Lunar skill. |
+| `minecraft-legacy-modding-1710` | 1.7.10 lane only. **Mapping work NOT started. Unverified.** |
+| `minecraft-oneclient` | OneClient-specific work. **Unverified on current builds.** |
+
+The 1.8.9 lane is the only proven lane. Do not rely on 1710 or oneclient
+skills for production porting work without first doing RECON and
+updating TARGET.md.
+
+---
+
+## HANDOFF.md
+
+`HANDOFF.md` (repo root) contains the full session history: what was
+confirmed, what was corrected, and the next session starting point.
+
+---
+
+## `Example Mod for 1.8/`
+
+- `smoketest/` — the canonical build example. Use this.
+- `Example-1.8.9-Mod/` — a Kotlin Architectury Loom template, kept for
+  reference only. Not the Lunar pattern. See `README-EXAMPLE.md` in that
+  folder.
+
+---
+
+## `Minecraft-Skills Rewrite/`
+
+In-progress rewrite. Do not delete or modify.
+
+---
+
+## Key facts confirmed by smoke test (2026-10-29)
+
+- Vanilla MC class names are NOT obfuscated by Ichor
+- Vanilla MC method/field names ARE remapped to Searge names
+- Searge names must be used in `remap=false` injections
+- Java 8 external mods load fine alongside Lunar's Java 17 internal lane
+- No JVM arguments needed — manifest `MixinConfigs` is the only mechanism
+- `Forge_v1_8.jar` in `offline/multiver/` is UNVERIFIED — check the
+  Lunar launcher for a Forge profile before writing mixin code

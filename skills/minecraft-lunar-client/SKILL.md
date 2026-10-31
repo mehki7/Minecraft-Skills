@@ -1,5 +1,3 @@
-markdown
----
 name: minecraft-lunar-client
 description: Port or patch client-side Minecraft mods onto Lunar Client's own closed, Mixin-based 1.7/1.8/1.12 "legacy" bundle (not Forge, not Fabric). Use when the target is Lunar Client specifically, its offline/multiver jars, or porting a Forge mod to run inside Lunar. Do not use for ordinary Forge or Fabric modding with no Lunar involvement — use minecraft-legacy-modding-189 or the main minecraft-modding skill for that.
 ---
@@ -20,12 +18,18 @@ Never assert something from this file that TARGET.md marks UNVERIFIED.
 ## Step 0 — Smoke test (mandatory before writing any real mixin code)
 
 Before writing a single line of real mod code, confirm the pipeline works
-on your specific machine and Lunar build:
+on your specific machine and Lunar build.
 
-1. Build `smoketest.jar` (source in `Example Mod for 1.8/`) with:
+**Canonical build example:** `Example Mod for 1.8/smoketest/` — not the
+Kotlin Architectury Loom template in `Example Mod for 1.8/Example-1.8.9-Mod/`
+(that template uses a different build system and implies FML exists; see
+`Example Mod for 1.8/README-EXAMPLE.md`).
+
+1. Build `smoketest.jar` (source in `Example Mod for 1.8/smoketest/`) with:
 
 javac -proc:none -cp FuriahVisuals.jar -d classes SmokePlugin.java MixinEntityRendererSmoke.java
 jar cfm smoketest.jar META-INF\MANIFEST.MF -C classes . mixins.smoketest.json mcmod.info
+
 
 2. Drop it in `.lunarclient\profiles\<your-profile>\mods\`.
 3. Launch, load a world, quit.
@@ -73,6 +77,7 @@ Every config inspected declares:
 
 C:\Users<you>.lunarclient\profiles<profile-name>\mods\
 
+
 Drop a `.jar` there. No launch arguments, no config, no registration.
 Lunar's 1.8.9 lane picks it up automatically.
 
@@ -90,6 +95,7 @@ ForceLoadAsMod: true
 TweakClass: org.spongepowered.asm.launch.MixinTweaker
 TweakOrder: 0
 MixinConfigs: mixins.<yourmod>.json
+
 
 `MixinConfigs` in the manifest is the sole confirmed loading mechanism.
 Zero JVM launch arguments needed.
@@ -215,7 +221,8 @@ large enough that rewriting the hook layer is impractical.
 ### Steps
 
 0. **Run the smoke test first** — confirm the pipeline works on your
-   machine before writing any mod-specific code.
+   machine before writing any mod-specific code. Source: `Example Mod for
+   1.8/smoketest/`. See Step 0 above.
 1. Look up the target class and method in TARGET.md's Runtime Name Table.
    If not there, query `lunar2searge.tsrg` and record the result in
    TARGET.md with the raw output pasted as evidence.
