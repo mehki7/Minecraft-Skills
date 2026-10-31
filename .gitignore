@@ -1,3 +1,2 @@
-*.jar 
-out/ 
-mixins.furiahsvisuals.refmap.json 
+*.jar
+out/
