@@ -1,0 +1,3 @@
+*.jar 
+out/ 
+mixins.furiahsvisuals.refmap.json 
