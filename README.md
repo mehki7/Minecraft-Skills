@@ -50,7 +50,8 @@ RECON is run and TARGET.md is updated.
 - `Example Mod for 1.8/smoketest/` — the canonical build example. Copy its
   folder layout, manifest keys, and mixin JSON for every new port.
 - `Example Mod for 1.8/port-guiingame/` — first real port. `@Inject` at
-  TAIL of `func_175180_a` (`GuiIngame.renderGameOverlay`).
+  HEAD of `func_175183_b` (`GuiIngame.showCrosshair`). TAIL of
+  `func_175180_a` is unreachable on Lunar — see TARGET.md.
 - `Example Mod for 1.8/Example-1.8.9-Mod/` — Kotlin/Architectury Loom
   template. Reference only, not the Lunar pattern. See `README-EXAMPLE.md`.
 
